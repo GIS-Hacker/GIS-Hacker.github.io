@@ -10,8 +10,15 @@
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
     <link rel="icon" href="favicon.png" type="image/x-icon">
-<body class="">
-<audio src="music.mp3" autoplay="autoplay" loop=""></audio>
+    <script type="text/javascript">
+        function change() {
+            var audio = document.getElementsByTagName("audio")[0];
+            audio.src = "music.mp3";
+        }
+    </script>
+</head>
+<body class="" onload="change()">
+<audio src="" autoplay="autoplay" loop=""></audio>
 <canvas id="sakura"></canvas>
 <!-- Wrapper -->
 <div id="wrapper">
@@ -45,7 +52,7 @@
             <ul class="copyright">
                 <li>© CS-Tao</li>
                 <li><img src="music.png" style="width: 10px; height: 10px;"><span class="song"> 亘古的思恋</span></li>
-                <li>Since 2017</li>
+                <li>Since 2017.</li>
             </ul>
         </footer>
     </section>
