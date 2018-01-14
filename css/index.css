@@ -579,7 +579,7 @@ min-height:100%;
 	line-height: 24px;
 	text-align: center;
 	vertical-align: middle;
-	/*margin: 5px;*/
+	padding: 5px;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
