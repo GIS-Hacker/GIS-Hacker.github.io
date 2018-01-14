@@ -429,7 +429,6 @@ min-height:100%;
 	width: 28px;
 	height: 28px;
 	line-height: 26px;
-	text-align: center;
   }
     .social a:hover {
 	opacity: 1;
@@ -580,7 +579,7 @@ min-height:100%;
 	line-height: 24px;
 	text-align: center;
 	vertical-align: middle;
-	margin: 5px;
+	/*margin: 5px;*/
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
