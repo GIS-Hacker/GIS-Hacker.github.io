@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>CS-Tao · HomePage</title>
+    <title><%= Title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
     <noscript>
         <link rel="stylesheet" href="css/noscript.css"/>
     </noscript>
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="<%= Favicon %>" type="image/x-icon">
 </head>
 <body class="">
 <audio src="" autoplay="autoplay" loop=""></audio>
@@ -19,39 +19,23 @@
     <section id="main">
         <header>
             <span class="avatar">
-                <a href="http://blog.cs-tao.cc/">
-                    <img src="https://raw.githubusercontent.com/CS-Tao/CS-Tao.github.io/master/img/avatar.png" width="118px">
+                <a href="<%= Avatar_href %>">
+                    <img src="<%= Avatar %>" width="118px">
                 </a>
             </span>
-            <a href="http://blog.cs-tao.cc/"><h1>CS-Tao</h1></a>
+            <a href="<%= Author_href %>"><h1><%= Author %></h1></a>
             <div class="social">
-                
-                    <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;amp;email=whucstao@qq.com" title="mail"><i class="icon-mail"></i></a>
-                
-                    <a class="github" target="_blank" href="https://github.com/CS-Tao" title="github"><i class="icon-github"></i></a>
-                
-                    <a class="weibo" target="_blank" href="http://weibo.com/tcs990296951" title="weibo"><i class="icon-weibo"></i></a>
-                
-                    <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/tao-chun-sheng-21/" title="zhihu"><i class="icon-zhihu"></i></a>
-                
-                    <a class="douban" target="_blank" href="https://www.douban.com/people/CS-Tao/" title="douban"><i class="icon-douban"></i></a>
-                
-                    <a class="google" target="_blank" href="https://plus.google.com/115901576244995527191" title="google"><i class="icon-google"></i></a>
-                
-                    <a class="twitter" target="_blank" href="https://twitter.com/TaoChengSheng" title="twitter"><i class="icon-twitter"></i></a>
-                
-                    <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/春生-陶-9917b3148/" title="linkedin"><i class="icon-linkedin"></i></a>
-                
-                    <a class="rss" target="_blank" href="http://blog.cs-tao.cc/atom.xml" title="rss"><i class="icon-rss"></i></a>
-                
+                <% Social.forEach(function(item) { %>
+                    <a class="<%= item.Name %>" target="_blank" href="<%= item.URL %>" title="<%= item.Name %>"><i class="icon-<%= item.Name %>"></i></a>
+                <% }); %>
 			</div>
-            <p style="margin-top: 10px;">也许，某天，当我们转过头，发现一切已在手里。<br>也许，某天，当我们偶一回眸，看到那人还在灯火阑珊中。</p>
+            <p style="margin-top: 10px;"><%- Text_for_show %></p>
         </header>
         <footer id="footer">
             <ul class="copyright">
-                <li>© CS-Tao</li>
-                <li><img src="assets/music.png" style="width: 10px; height: 10px;"><span class="song"> 告白</span></li>
-                <li>Since 2017</li>
+                <li>© <%= Author %></li>
+                <li><img src="assets/music.png" style="width: 10px; height: 10px;"><span class="song"> <%= Music_name %></span></li>
+                <li>Since <%= Since_year %></li>
             </ul>
         </footer>
     </section>
@@ -69,10 +53,10 @@
         var OriginTitile = document.title, titleTime;
         document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
-                document.title = "点我点我";
+                document.title = "<%= Title_leave %>";
                 clearTimeout(titleTime);
             } else {
-                document.title = "就很开心";
+                document.title = "<%= Title_return %>";
                 titleTime = setTimeout(function() {
                     document.title = OriginTitile;
                 }, 2000);
@@ -1186,7 +1170,7 @@ void main(void) {
         timeInfo.start = new Date();
         timeInfo.prev = timeInfo.start;
         animate();
-        document.getElementsByTagName("audio")[0].src = "assets/music.mp3";
+        document.getElementsByTagName("audio")[0].src = "<%= Music_URL %>";
     });
 
     //set window.requestAnimationFrame

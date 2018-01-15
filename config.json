@@ -1,0 +1,53 @@
+{
+    "Title": "CS-Tao · HomePage",
+    "Title_leave": "点我点我",
+    "Title_return": "就很开心",
+    "Favicon": "favicon.png",
+    "Avatar": "https://raw.githubusercontent.com/CS-Tao/CS-Tao.github.io/master/img/avatar.png",
+    "Avatar_href": "http://blog.cs-tao.cc/",
+    "Author" : "CS-Tao",
+    "Author_href": "http://blog.cs-tao.cc/",
+    "Text_for_show": "也许，某天，当我们转过头，发现一切已在手里。<br>也许，某天，当我们偶一回眸，看到那人还在灯火阑珊中。",
+    "Since_year": "2017",
+    "Music_URL": "assets/music.mp3",
+    "Music_name": "告白",
+    
+    "Social": [
+        {
+            "Name": "mail",
+            "URL": "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=whucstao@qq.com"
+        },
+        {
+            "Name": "github",
+            "URL": "https://github.com/CS-Tao"
+        },
+        {
+            "Name": "weibo",
+            "URL": "http://weibo.com/tcs990296951"
+        },
+        {
+            "Name": "zhihu",
+            "URL": "https://www.zhihu.com/people/tao-chun-sheng-21/"
+        },
+        {
+            "Name": "douban",
+            "URL": "https://www.douban.com/people/CS-Tao/"
+        },
+        {
+            "Name": "google",
+            "URL": "https://plus.google.com/115901576244995527191"
+        },
+        {
+            "Name": "twitter",
+            "URL": "https://twitter.com/TaoChengSheng"
+        },
+        {
+            "Name": "linkedin",
+            "URL": "https://www.linkedin.com/in/春生-陶-9917b3148/"
+        },
+        {
+            "Name": "rss",
+            "URL": "http://blog.cs-tao.cc/atom.xml"
+        }
+    ]
+}
