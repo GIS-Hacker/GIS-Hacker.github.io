@@ -63,6 +63,22 @@
         document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
     }
 </script>
+<script>
+    (function() {
+        var OriginTitile = document.title, titleTime;
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = "点我点我";
+                clearTimeout(titleTime);
+            } else {
+                document.title = "就很开心";
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile;
+                }, 2000);
+            }
+        });
+    })();
+</script>
 <script id="sakura_point_vsh" type="x-shader/x_vertex">
 uniform mat4 uProjection;
 uniform mat4 uModelview;
